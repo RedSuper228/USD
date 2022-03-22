@@ -54,28 +54,37 @@ public class DivineFragment extends Fragment implements View.OnClickListener {
         TextView tv_answer4 = (TextView) getView().findViewById(R.id.tv_answer4);
         TextView tv_answer5 = (TextView) getView().findViewById(R.id.tv_answer5);
 
-        /*
+
         tv_answer1.setVisibility(View.INVISIBLE);
         tv_answer2.setVisibility(View.INVISIBLE);
         tv_answer3.setVisibility(View.INVISIBLE);
         tv_answer4.setVisibility(View.INVISIBLE);
         tv_answer5.setVisibility(View.INVISIBLE);
-        */
+
         bt_search.setOnClickListener(this);
+
+        bt_search.setOnClickListener(new View.OnClickListener()
+        {
+            @Override
+            public void onClick(View v)
+            {
+                if (v == bt_search) {
+                    String question = et_question.getText().toString();
+                    char[] CHbible = bible.toCharArray();
+                    char[] CHquestion = question.toCharArray();
+                    int answer = SearchingClass.simpleTextSearch(CHquestion, CHbible);
+                    tv_answer1.setText(String.valueOf(answer));
+                    tv_answer1.setVisibility(View.VISIBLE);
+                }
+            }
+        });
+
 
     }
 
+
     @Override
     public void onClick(View v) {
-        if (v == bt_search){
-            String question = et_question.getText().toString();
-            String answer = SearchingClass.divineInText(question);
-            //char[] CHbible = bible.toCharArray();
-            //char[] CHquestion = question.toCharArray();
-            //int answer = SearchingClass.simpleTextSearch(CHquestion, CHbible);
-            tv_answer1.setText(answer);
-            tv_answer1.setVisibility(View.VISIBLE);
 
-        }
     }
 }
