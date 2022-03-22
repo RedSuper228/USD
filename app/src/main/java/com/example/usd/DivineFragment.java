@@ -61,8 +61,6 @@ public class DivineFragment extends Fragment implements View.OnClickListener {
         tv_answer4.setVisibility(View.INVISIBLE);
         tv_answer5.setVisibility(View.INVISIBLE);
 
-        bt_search.setOnClickListener(this);
-
         bt_search.setOnClickListener(new View.OnClickListener()
         {
             @Override

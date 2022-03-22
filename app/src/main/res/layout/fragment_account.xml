@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DivineFragment">
+
+    <ScrollView
+        android:id="@+id/sv_userdata"
+        android:layout_width="350dp"
+        android:layout_height="615dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_username"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="USERNAME" />
+            <TextView
+                android:id="@+id/tv_email"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="EMAIL" />
+            <TextView
+                android:id="@+id/tv_tel_num"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="TELEPHONE NUMBER" />
+
+            <Button
+                android:id="@+id/bt_edit"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Edit" />
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/sv_edit_userdata"
+        android:layout_width="350dp"
+        android:layout_height="615dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/et_username"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="USERNAME" />
+            <EditText
+                android:id="@+id/et_email"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="EMAIL" />
+            <EditText
+                android:id="@+id/et_tel_num"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="TELEPHONE NUMBER" />
+
+            <Button
+                android:id="@+id/bt_save"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Save" />
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

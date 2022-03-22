@@ -42,8 +42,8 @@ public class MainActivity extends AppCompatActivity {
                             fragment=new LibraryFragment();
                             break;
 
-                        case R.id.settings:
-                            fragment=new SettingsFragment();
+                        case R.id.account:
+                            fragment=new AccountFragment();
                             break;
                     }
                     getSupportFragmentManager().beginTransaction().replace(R.id.container, fragment).commit();
