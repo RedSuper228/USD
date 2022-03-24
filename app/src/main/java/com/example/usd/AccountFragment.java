@@ -13,8 +13,13 @@ import android.widget.EditText;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
-public class AccountFragment extends Fragment implements View.OnClickListener {
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
+public class AccountFragment extends Fragment implements View.OnClickListener {
 
     public AccountFragment() { }
 
@@ -33,6 +38,10 @@ public class AccountFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 
+        FirebaseDatabase database = FirebaseDatabase.getInstance("https://usd-school-project-default-rtdb.europe-west1.firebasedatabase.app/");
+        DatabaseReference databaseReference = database.getReference("userdata");
+
+
         TextView tv_username = (TextView) getView().findViewById(R.id.tv_username);
         TextView tv_email = (TextView) getView().findViewById(R.id.tv_email);
         TextView tv_tel_num = (TextView) getView().findViewById(R.id.tv_tel_num);
@@ -50,6 +59,25 @@ public class AccountFragment extends Fragment implements View.OnClickListener {
         et_tel_num.setVisibility(View.INVISIBLE);
         bt_save.setVisibility(View.INVISIBLE);
         sv_edit_userdata.setVisibility(View.INVISIBLE);
+
+        // Read from the database
+        databaseReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                // This method is called once with the initial value and again
+                // whenever data at this location is updated.
+                UserData value = dataSnapshot.getValue(UserData.class);
+                tv_username.setText(value.username);
+                tv_email.setText(value.email);
+                tv_tel_num.setText(value.tel_num);
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError error) {
+                // Failed to read value
+            }
+        });
 
         bt_edit.setOnClickListener(new View.OnClickListener()
         {
@@ -78,6 +106,12 @@ public class AccountFragment extends Fragment implements View.OnClickListener {
             public void onClick(View v)
             {
                 if (v == bt_save){
+                    UserData userData = new UserData(
+                            et_username.getText().toString(),
+                            et_email.getText().toString(),
+                            et_tel_num.getText().toString());
+                    databaseReference.setValue(userData);
+
                     et_username.setVisibility(View.INVISIBLE);
                     et_email.setVisibility(View.INVISIBLE);
                     et_tel_num.setVisibility(View.INVISIBLE);
@@ -98,4 +132,5 @@ public class AccountFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) { }
+
 }

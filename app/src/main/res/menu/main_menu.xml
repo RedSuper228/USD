@@ -10,6 +10,6 @@
         android:icon="@mipmap/ic_library_foreground"/>
     <item
         android:id="@+id/account"
-        android:title="Settings"
+        android:title="Account"
         android:icon="@mipmap/ic_settings_foreground"/>
 </menu>
