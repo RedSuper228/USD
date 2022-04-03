@@ -105,8 +105,9 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="-149dp"
         android:layout_marginEnd="-147dp"
-        android:layout_marginBottom="-200dp"
-        android:src="@drawable/golden_text_background" />
+        android:layout_marginBottom="-2000dp"
+        android:src="@drawable/golden_text_background"
+        tools:visibility="visible" />
 
 
 </RelativeLayout>

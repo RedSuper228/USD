@@ -52,11 +52,12 @@ public class DivineFragment extends Fragment implements View.OnClickListener {
 
 
         EditText et_question = (EditText) getView().findViewById(R.id.et_question);
+        TextView tv_answer = (TextView) getView().findViewById(R.id.tv_answer);
         //ImageView bt_search = (ImageView) getView().findViewById(R.id.bt_search);
 
 
 
-        Animation fadein = AnimationUtils.loadAnimation(MainActivity.this,R.anim.fadein);
+        Animation fadein = AnimationUtils.loadAnimation(getContext(),R.anim.fadein);
         tv_answer.startAnimation(fadein);
 
 
