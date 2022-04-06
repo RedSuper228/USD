@@ -9,8 +9,8 @@
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/gif_crystal_ball"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:src="@drawable/crystal_ball" />
 
     <ScrollView
@@ -45,8 +45,8 @@
 
     <ImageView
         android:id="@+id/iv_crystal_ball"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:src="@drawable/crystal_ball_pic" />
 
     <ImageView
@@ -94,6 +94,7 @@
         android:hint="Question"
         android:inputType="text"
         android:textAlignment="center"
+        android:focusableInTouchMode="true"
         android:textColor="@color/white" />
 
     <ImageView
