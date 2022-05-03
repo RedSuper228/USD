@@ -74,6 +74,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             };
 
+    //TODO - fix notifications
     private void scheduleNotification (Notification notification , long delay) {
         Intent notificationIntent = new Intent( this, MyNotificationPublisher. class ) ;
         notificationIntent.putExtra(MyNotificationPublisher. NOTIFICATION_ID , 1 ) ;

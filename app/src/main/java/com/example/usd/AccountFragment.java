@@ -21,6 +21,8 @@ import com.google.firebase.database.ValueEventListener;
 
 public class AccountFragment extends Fragment implements View.OnClickListener {
 
+    //TODO - think of way to make accounts useful, maybe by saving special dates and favorite qoutes
+
     public AccountFragment() { }
 
     @Override
