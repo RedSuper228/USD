@@ -85,6 +85,10 @@ public class DivineFragment extends Fragment implements View.OnClickListener {
                     check = false;
                     bt_divine.setVisibility(View.INVISIBLE);
                     bt_return.setVisibility(View.VISIBLE);
+
+                    SearchingClass searcher = new SearchingClass();
+                    tv_answer.setText(searcher.divine());
+
                     Animation fadein = AnimationUtils.loadAnimation(getContext(),R.anim.fadein);
                     sv_answer.startAnimation(fadein);
                     ll_answer.startAnimation(fadein);
@@ -94,6 +98,8 @@ public class DivineFragment extends Fragment implements View.OnClickListener {
                     tv_instructions.startAnimation(fadeout);
                     iv_text_banner.startAnimation(fadeout);
                     iv_text_banner_hidden.startAnimation(fadein);
+
+                    et_question.getText().clear();
                 }
             }
         });

@@ -1,24 +1,18 @@
 package com.example.usd;
 
+import java.util.Random;
+
 public class SearchingClass {
 
-    public static String divineInText(String strQuestion){
-        return "1";
-        //TODO
+    public String divine(){
+        Random rand = new Random();
+        int name = rand.nextInt(Bible.bible.length);
+        int firstnum = rand.nextInt(Bible.bible[name].length);
+        int secondnum = rand.nextInt(Bible.bible[name][firstnum].length);
+        return Bible.bible[name][firstnum][secondnum];
     }
 
-    public static int findFirstIndex(int i, String bible){
-        return -1;
-        //TODO
-    }
-
-    public static int findLastIndex(int i, String bible){
-        return -1;
-        //TODO
-    }
-
-
-    public static int simpleTextSearch(char[] pattern, char[] text) {
+    public int simpleTextSearch(char[] pattern, char[] text) {
         int patternSize = pattern.length;
         int textSize = text.length;
 
