@@ -18,6 +18,7 @@ import com.google.firebase.database.ValueEventListener;
 
 
 public class NotificationClass {
+    //todo - daily notification for the "quote of the day"
 
 }
 

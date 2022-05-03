@@ -18,7 +18,7 @@ import android.widget.TextView;
 
 public class DivineFragment extends Fragment implements View.OnClickListener {
 
-
+    //todo - save bible to firebase
 
     String bible = Bible.bible;
 

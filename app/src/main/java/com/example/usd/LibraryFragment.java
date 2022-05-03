@@ -22,7 +22,7 @@ public class LibraryFragment extends Fragment implements View.OnClickListener {
     DatabaseReference db_ref;
     StorageReference storage_ref;
 
-
+    //todo - stores all bible or favorite chapters
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
