@@ -1,33 +1,34 @@
 {
   "project_info": {
-    "project_number": "962317853545",
-    "project_id": "usd-school-project",
-    "storage_bucket": "usd-school-project.appspot.com"
+    "project_number": "289070998965",
+    "firebase_url": "https://usd1-1c631-default-rtdb.firebaseio.com",
+    "project_id": "usd1-1c631",
+    "storage_bucket": "usd1-1c631.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:962317853545:android:83ef3ba7a63374f48b93f8",
+        "mobilesdk_app_id": "1:289070998965:android:1c6815501b9e3873d625fc",
         "android_client_info": {
           "package_name": "com.example.usd"
         }
       },
       "oauth_client": [
         {
-          "client_id": "962317853545-jq56ptokfqq95t3u4k8iebtnbnpe8ibf.apps.googleusercontent.com",
+          "client_id": "289070998965-t75nkr6sk0sldbn9j6t8h0lbspm40jrp.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCsA8Ff9xr9Np9oq7A6-V_-VzKfgSEGONk"
+          "current_key": "AIzaSyDohyI-EhWmXMPzJb6xal1uL7E_XYe59zs"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "962317853545-jq56ptokfqq95t3u4k8iebtnbnpe8ibf.apps.googleusercontent.com",
+              "client_id": "289070998965-t75nkr6sk0sldbn9j6t8h0lbspm40jrp.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
