@@ -6,6 +6,7 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import android.speech.tts.TextToSpeech;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,11 +19,14 @@ import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
 
+import java.util.Locale;
+
 
 public class DivineFragment extends Fragment implements View.OnClickListener {
 
 
     boolean check;
+    TextToSpeech textToSpeech;
 
 
     public DivineFragment() {
@@ -46,6 +50,16 @@ public class DivineFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+
+        textToSpeech = new TextToSpeech(getContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if (status != TextToSpeech.ERROR){
+                    textToSpeech.setLanguage(Locale.CANADA);
+                }
+
+            }
+        });
 
 
 
@@ -100,6 +114,8 @@ public class DivineFragment extends Fragment implements View.OnClickListener {
                     iv_text_banner_hidden.startAnimation(fadein);
 
                     et_question.getText().clear();
+
+                    textToSpeech.speak(tv_answer.getText().toString(), TextToSpeech.QUEUE_FLUSH, null);
                 }
             }
         });
@@ -110,6 +126,8 @@ public class DivineFragment extends Fragment implements View.OnClickListener {
             public void onClick(View v)
             {
                 if (v == bt_return && !check) {
+                    textToSpeech.stop();
+
                     check = true;
                     bt_divine.setVisibility(View.VISIBLE);
                     bt_return.setVisibility(View.INVISIBLE);
@@ -134,4 +152,5 @@ public class DivineFragment extends Fragment implements View.OnClickListener {
     public void onClick(View v) {
 
     }
+
 }
