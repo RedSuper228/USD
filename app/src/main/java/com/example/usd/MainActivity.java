@@ -18,6 +18,7 @@ import androidx.core.app.NotificationCompat;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -118,5 +119,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-
+    public void logout(View view) {
+        FirebaseAuth.getInstance().signOut();//logout
+        startActivity(new Intent(getApplicationContext(),LoginScreen.class));
+        finish();
+    }
 }

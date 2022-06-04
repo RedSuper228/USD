@@ -3,12 +3,16 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/user/AndroidStudioProjects/USD/app/src/main/res/drawable/ic_divine_background.xml" value="0.3890625" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/USD/app/src/main/res/layout/activity_login_screen.xml" value="0.13418290854572715" />
         <entry key="..\:/Users/user/AndroidStudioProjects/USD/app/src/main/res/layout/activity_main.xml" value="0.5" />
         <entry key="..\:/Users/user/AndroidStudioProjects/USD/app/src/main/res/layout/fragment_account.xml" value="0.33" />
         <entry key="..\:/Users/user/AndroidStudioProjects/USD/app/src/main/res/layout/fragment_divine.xml" value="0.33" />
         <entry key="..\:/Users/user/AndroidStudioProjects/USD/app/src/main/res/layout/fragment_divine_answer.xml" value="0.22192028985507245" />
         <entry key="..\:/Users/user/AndroidStudioProjects/USD/app/src/main/res/layout/fragment_library.xml" value="0.24139492753623187" />
         <entry key="..\:/Users/user/AndroidStudioProjects/USD/app/src/main/res/layout/fragment_settings.xml" value="0.25" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/USD/app/src/main/res/layout/login_screen.xml" value="0.67" />
+        <entry key="..\:/Users/user/AndroidStudioProjects/USD/app/src/main/res/layout/register_screen.xml" value="1.25" />
         <entry key="..\:/Users/user/AndroidStudioProjects/USD/app/src/main/res/menu/main_menu.xml" value="0.33" />
       </map>
     </option>
