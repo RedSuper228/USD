@@ -23,8 +23,8 @@
         android:id="@+id/et_pdf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="68dp"
-        android:layout_marginBottom="252dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginBottom="452dp"
         android:ems="10"
         android:inputType="textPersonName"
         android:text="Name"
@@ -35,11 +35,19 @@
         android:id="@+id/btn_pdf"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="156dp"
-        android:layout_marginTop="316dp"
-        android:text="Button"
+        android:layout_marginStart="196dp"
+        android:layout_marginTop="320dp"
+        android:text="Upload File"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
+    <Button
+        android:id="@+id/btn_read_pdf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="320dp"
+        android:text="Read File"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
