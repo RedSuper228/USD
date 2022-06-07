@@ -4,6 +4,7 @@ import java.util.Random;
 
 public class SearchingClass {
 
+    // Get answer to question
     public String divine(){
         Random rand = new Random();
         int name = rand.nextInt(Bible.bible.length);
@@ -12,6 +13,7 @@ public class SearchingClass {
         return Bible.bible[name][firstnum][secondnum];
     }
 
+    // Unused searching algorithm
     public int simpleTextSearch(char[] pattern, char[] text) {
         int patternSize = pattern.length;
         int textSize = text.length;

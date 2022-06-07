@@ -42,6 +42,8 @@ public class LoginScreen extends AppCompatActivity {
         btn_login = findViewById(R.id.loginBtn);
         tv_create = findViewById(R.id.createText);
 
+
+        // Try to Login
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -65,6 +67,7 @@ public class LoginScreen extends AppCompatActivity {
 
                 progressBar.setVisibility(View.VISIBLE);
 
+                // Login
                 fAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -83,7 +86,7 @@ public class LoginScreen extends AppCompatActivity {
 
             }
         });
-
+        // Go to Registration Screen
         tv_create.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

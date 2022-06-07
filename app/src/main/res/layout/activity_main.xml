@@ -12,7 +12,8 @@
         android:layout_height = "wrap_content"
         android:hint = "Select Date"
         android:onClick = "setDate"
-        android:padding = "16dp" />
+        android:padding = "16dp"
+        android:visibility="invisible"/>
 
     <FrameLayout
         android:layout_width="match_parent"

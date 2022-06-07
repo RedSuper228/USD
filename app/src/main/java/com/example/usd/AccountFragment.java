@@ -83,6 +83,7 @@ public class AccountFragment extends Fragment implements View.OnClickListener {
             }
         });
 
+        // Edit Account
         bt_edit.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -104,6 +105,8 @@ public class AccountFragment extends Fragment implements View.OnClickListener {
             }
 
         });
+
+        // Save changes
         bt_save.setOnClickListener(new View.OnClickListener()
         {
             @Override

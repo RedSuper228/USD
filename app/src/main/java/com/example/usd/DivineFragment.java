@@ -89,7 +89,7 @@ public class DivineFragment extends Fragment implements View.OnClickListener {
         sv_answer.setVisibility(View.INVISIBLE);
 
 
-
+        // Divine Button
         bt_divine.setOnClickListener(new View.OnClickListener()
         {
             @Override
@@ -120,6 +120,7 @@ public class DivineFragment extends Fragment implements View.OnClickListener {
             }
         });
 
+        // Ask Another question
         bt_return.setOnClickListener(new View.OnClickListener()
         {
             @Override

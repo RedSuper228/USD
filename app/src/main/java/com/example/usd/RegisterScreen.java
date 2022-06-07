@@ -48,6 +48,7 @@ public class RegisterScreen extends AppCompatActivity {
             finish();
         }
 
+        // Try to create account
         btn_register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -76,6 +77,7 @@ public class RegisterScreen extends AppCompatActivity {
 
                 progressBar.setVisibility(View.VISIBLE);
 
+                // Create account
                 fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
@@ -93,6 +95,7 @@ public class RegisterScreen extends AppCompatActivity {
             }
         });
 
+        //Go to Login Screen
         tv_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
